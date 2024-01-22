@@ -80,7 +80,7 @@ public class MobileCommonUtils {
 
     //Press by coordinates
     public static void pressByCoordinates(AndroidDriver driver, int x, int y, long seconds) {
-        new TouchAction(driver)
+        touchAction(driver)
                 .press(point(x, y))
                 .waitAction(waitOptions(ofSeconds(seconds)))
                 .release()
@@ -93,7 +93,7 @@ public class MobileCommonUtils {
         int anchor = (int) (size.height * anchorPercentage); //
         int startPoint = (int) (size.width * startPercentage);
         int endPoint = (int) (size.width * endPercentage);
-        new TouchAction(driver)
+        touchAction(driver)
                 .press(point(startPoint, anchor))
                 .waitAction(waitOptions(ofSeconds(waitOptionsDuration)))
                 .moveTo(point(endPoint, anchor))
@@ -101,7 +101,7 @@ public class MobileCommonUtils {
     }
 
     public static void horizontalSwipeByCoordinates(AndroidDriver driver, int xStart, int xEnd, int y) {
-        new TouchAction(driver)
+        touchAction(driver)
                 .press(point(xStart, y))
                 .waitAction(waitOptions(ofSeconds(waitOptionsDuration)))
                 .moveTo(point(xEnd, y))
@@ -114,7 +114,7 @@ public class MobileCommonUtils {
         int anchor = (int) (size.width * anchorPercentage);
         int startPoint = (int) (size.height * startPercentage);
         int endPoint = (int) (size.height * endPercentage);
-        new TouchAction(driver)
+        touchAction(driver)
                 .press(point(anchor, startPoint))
                 .waitAction(waitOptions(ofSeconds(waitOptionsDuration)))
                 .moveTo(point(anchor, endPoint))
@@ -122,7 +122,7 @@ public class MobileCommonUtils {
     }
 
     public static void verticalSwipeByCoordinates(AndroidDriver driver, int x, int yStart, int yEnd) {
-        new TouchAction(driver)
+        touchAction(driver)
                 .press(point(x, yStart))
                 .waitAction(waitOptions(ofSeconds(waitOptionsDuration)))
                 .moveTo(point(x, yEnd))
@@ -132,5 +132,8 @@ public class MobileCommonUtils {
     public static TouchAction touchAction(AndroidDriver driver) {
         return new TouchAction(driver);
     }
+
+
+
 
 }

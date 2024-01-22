@@ -10,7 +10,7 @@ Feature: theScore Leagues Page Navigation
     And user selects Spain Soccer from the Leagues
     Then Spain Soccer League title should be displayed
     And user selects Table sub-tab
-    Then table subtitle should be displayed
+    Then table subtitle should be selected
     When user taps on back navigation
-    Then previous page is displayed
+    Then previous page Leagues is displayed
 

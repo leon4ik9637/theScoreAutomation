@@ -3,12 +3,7 @@ Hello all!
 I love sports, and this would be great opportunity to grow in such environment, and I would like to thank you 
 for having such an amazing opportunity to collaborate and introduce my skills to you.
 
-First thing is first, I could not use Appium Inspector and Android Studio, I believe my local does not
-have enough memory to launch emulator after all updates. I also tried online appium inspector and many other 
-ways to make it work, but I had only 1 week to complete this assignment, so I decided to create a framework
-in which there are no locators (I often practice such thing before new update is about to be released),
-but hopefully you will check my approach to automate mobile application. If I could test it on my end,
-I would at least know what is going on and if it is working, so I can only predict.
+I updated code with all the locators and you can run it by pressing green "Run" button from the top.
 
 Everything is under src/test.
 

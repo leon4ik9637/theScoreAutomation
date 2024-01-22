@@ -13,13 +13,17 @@ public class TheScoreLeaguesPage {
         PageFactory.initElements(new AppiumFieldDecorator(androidDriver), this);
     }
 
-
-    @AndroidFindBy(id = "locator for the list of leagues")
+    @AndroidFindBy(id = "com.fivemobile.thescore:id/league_name_text")
     public List<WebElement> leagueOptions;
+
+    @AndroidFindBy(id = "com.fivemobile.thescore:id/titleTextView")
+    public WebElement leaguesTitleText;
 
     public void selectLeagueFromListOfLeagues(String leagueOption){
         for(WebElement element : leagueOptions){
-            if(element.getText().equalsIgnoreCase(leagueOption)){
+            String textAttribute = element.getAttribute("text");
+
+            if(leagueOption.equals(textAttribute)){
                 element.click();
                 break;
             }

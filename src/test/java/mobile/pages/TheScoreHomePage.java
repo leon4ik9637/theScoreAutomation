@@ -11,6 +11,17 @@ public class TheScoreHomePage {
         PageFactory.initElements(new AppiumFieldDecorator(androidDriver), this);
     }
 
-    @AndroidFindBy(id = "Assuming Leagues button is a Web Element, not in the List of web elements")
+    @AndroidFindBy(id = "com.fivemobile.thescore:id/dismiss_modal")
+    public WebElement popupAdDismissal;
+
+    @AndroidFindBy(id = "com.fivemobile.thescore:id/btn_allow")
+    public WebElement allowLocationButton;
+
+    @AndroidFindBy(id = "com.android.packageinstaller:id/permission_allow_button")
+    public WebElement permissionAllowButton;
+
+    @AndroidFindBy(accessibility = "Leagues")
     public WebElement leaguesButton;
+
+
 }

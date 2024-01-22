@@ -11,14 +11,14 @@ public class TheScoreLogInPage {
         PageFactory.initElements(new AppiumFieldDecorator(androidDriver), this);
     }
 
-    @AndroidFindBy(xpath = "//emailInputBoxLocator")
+    @AndroidFindBy(id = "com.fivemobile.thescore:id/email_input_edittext")
     public WebElement emailInputBox;
 
-    @AndroidFindBy(xpath = "//passwordInputBoxLocator")
+    @AndroidFindBy(id = "com.fivemobile.thescore:id/password_input_edittext")
     public WebElement passwordInputBox;
 
-    @AndroidFindBy(xpath = "//loginButtonLocator")
-    public WebElement loginButton;
+    @AndroidFindBy(id = "com.fivemobile.thescore:id/action_button_text")
+    public WebElement loginPageLoginButton;
 
     @AndroidFindBy(xpath = "//gotItPopup")
     public WebElement gotItPopup;
